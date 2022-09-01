@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">All About Dead by Daylight</string>
+    <string name="recent_updates">RECENT UPDATES</string>
+    <string name="killer">Killer</string>
+    <string name="survivor">Survivor</string>
+    <string name="realms">Realms</string>
+    <string name="others">Others</string>
+    <string name="how_to_play">How to Play</string>
 </resources>

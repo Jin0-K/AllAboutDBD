@@ -4,6 +4,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainMenuActivity">
+    android:paddingVertical="50dp"
+    tools:context=".MainMenuActivity"
+    android:background="@color/dark_grey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_recentupdates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:backgroundTint="@color/dark_blood"
+            android:paddingVertical="15dp"
+            android:text="@string/recent_updates"
+            android:textSize="22sp"
+            app:cornerRadius="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_killer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/dark_grey"
+            android:paddingVertical="15dp"
+            android:text="@string/killer"
+            android:textColor="@color/dark_blood"
+            android:textSize="22sp"
+            app:cornerRadius="30dp"
+            app:strokeColor="@color/dark_blood"
+            app:strokeWidth="4dp" />
+
+        <Button
+            android:id="@+id/btn_survivor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/dark_grey"
+            android:paddingVertical="15dp"
+            android:text="@string/survivor"
+            android:textColor="@color/dark_blood"
+            android:textSize="22sp"
+            app:cornerRadius="30dp"
+            app:strokeColor="@color/dark_blood"
+            app:strokeWidth="4dp" />
+
+        <Button
+            android:id="@+id/btn_realms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/dark_grey"
+            android:paddingVertical="15dp"
+            android:text="@string/realms"
+            android:textColor="@color/dark_blood"
+            android:textSize="22sp"
+            app:cornerRadius="30dp"
+            app:strokeColor="@color/dark_blood"
+            app:strokeWidth="4dp" />
+
+        <Button
+            android:id="@+id/btn_others"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/dark_grey"
+            android:paddingVertical="15dp"
+            android:text="@string/others"
+            android:textColor="@color/dark_blood"
+            android:textSize="22sp"
+            app:cornerRadius="30dp"
+            app:strokeColor="@color/dark_blood"
+            app:strokeWidth="4dp" />
+
+        <Button
+            android:id="@+id/btn_howtoplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/dark_grey"
+            android:paddingVertical="15dp"
+            android:text="@string/how_to_play"
+            android:textColor="@color/dark_blood"
+            android:textSize="22sp"
+            app:cornerRadius="30dp"
+            app:strokeColor="@color/dark_blood"
+            app:strokeWidth="4dp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
