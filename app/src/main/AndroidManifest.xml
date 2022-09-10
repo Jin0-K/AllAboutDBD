@@ -13,6 +13,14 @@
         android:theme="@style/Theme.AllAboutDBD"
         tools:targetApi="31">
         <activity
+            android:name=".KillerListActivity"
+            android:exported="false"
+            android:parentActivityName=".KillerMainActivity"/>
+        <activity
+            android:name=".KillerMainActivity"
+            android:exported="false"
+            android:parentActivityName=".MainMenuActivity" />
+        <activity
             android:name=".MainMenuActivity"
             android:exported="false" />
         <activity

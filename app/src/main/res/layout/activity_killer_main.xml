@@ -4,105 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingVertical="50dp"
-    tools:context=".MainMenuActivity"
+    tools:context=".KillerMainActivity"
     android:background="@color/grey">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/killer"
+        android:textSize="26sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:backgroundTint="@android:color/transparent"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/tv_title">
 
         <Button
-            android:id="@+id/btn_recentupdates"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:backgroundTint="@color/dark_blood"
-            android:paddingVertical="15dp"
-            android:text="@string/recent_updates"
-            android:textSize="22sp"
-            app:cornerRadius="30dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btn_killer"
+            android:id="@+id/btn_characters"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/grey"
             android:paddingVertical="15dp"
-            android:text="@string/killer"
+            android:text="@string/characters"
             android:textColor="@color/dark_blood"
             android:textSize="22sp"
+            android:textAllCaps="false"
             app:cornerRadius="30dp"
             app:strokeColor="@color/dark_blood"
             app:strokeWidth="4dp" />
 
         <Button
-            android:id="@+id/btn_survivor"
+            android:id="@+id/btn_perks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/grey"
             android:paddingVertical="15dp"
-            android:text="@string/survivor"
+            android:text="@string/perks"
             android:textColor="@color/dark_blood"
             android:textSize="22sp"
+            android:textAllCaps="false"
             app:cornerRadius="30dp"
             app:strokeColor="@color/dark_blood"
             app:strokeWidth="4dp" />
 
         <Button
-            android:id="@+id/btn_realms"
+            android:id="@+id/btn_items"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/grey"
             android:paddingVertical="15dp"
-            android:text="@string/realms"
+            android:text="@string/items_addons"
             android:textColor="@color/dark_blood"
             android:textSize="22sp"
-            app:cornerRadius="30dp"
-            app:strokeColor="@color/dark_blood"
-            app:strokeWidth="4dp" />
-
-        <Button
-            android:id="@+id/btn_others"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="@color/grey"
-            android:paddingVertical="15dp"
-            android:text="@string/others"
-            android:textColor="@color/dark_blood"
-            android:textSize="22sp"
-            app:cornerRadius="30dp"
-            app:strokeColor="@color/dark_blood"
-            app:strokeWidth="4dp" />
-
-        <Button
-            android:id="@+id/btn_howtoplay"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="@color/grey"
-            android:paddingVertical="15dp"
-            android:text="@string/how_to_play"
-            android:textColor="@color/dark_blood"
-            android:textSize="22sp"
+            android:textAllCaps="false"
             app:cornerRadius="30dp"
             app:strokeColor="@color/dark_blood"
             app:strokeWidth="4dp" />
