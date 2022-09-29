@@ -69,7 +69,7 @@
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/grey"
             android:paddingVertical="15dp"
-            android:text="@string/items_addons"
+            android:text="@string/items"
             android:textColor="@color/dark_blood"
             android:textSize="22sp"
             android:textAllCaps="false"

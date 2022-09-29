@@ -10,6 +10,7 @@
 
     <string name="characters">Characters</string>
     <string name="perks">Perks</string>
+    <string name="items">Items</string>
     <string name="items_addons">Items/Add ons</string>
     <string name="perk">perk</string>
 </resources>

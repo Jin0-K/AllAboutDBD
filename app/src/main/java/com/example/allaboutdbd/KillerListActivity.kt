@@ -7,16 +7,27 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.allaboutdbd.databinding.ActivityKillerListBinding
 import kotlinx.android.synthetic.main.activity_killer_list.*
 import kotlinx.android.synthetic.main.list_entity.view.*
 
 class KillerListActivity : AppCompatActivity() {
 
-    val killerList = mutableListOf("Nurse", "Blight")
+    private lateinit var binding: ActivityKillerListBinding
+
+    val killerList = listOf(
+        Character("Trapper", mutableListOf()),
+        Character("Wraith", mutableListOf()),
+        Character("Hillbilly", mutableListOf()),
+        Character("Nurse", mutableListOf()),
+        Character("Shape", mutableListOf()),
+        Character("Hag", mutableListOf())
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_killer_list)
+        binding = ActivityKillerListBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
@@ -25,26 +36,37 @@ class KillerListActivity : AppCompatActivity() {
         layoutManager.orientation = LinearLayoutManager.HORIZONTAL
 
         // Set layout manager of recycler view to layoutManager that just created
-        rv_killerlist.layoutManager = layoutManager
-        rv_killerlist.adapter = MyAdaptor()
+        rv_killerlist.layoutManager = LinearLayoutManager(this)
+        rv_killerlist.adapter = MyAdaptor(killerList)
     }
 
-    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class CharacterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val portrait = itemView.iv_portrait
         val perks = mutableListOf(itemView.iv_perk1, itemView.iv_perk2, itemView.iv_perk3)
+
+        fun bind(character: Character) {
+            itemView.tv_name.text = character.name
+            // no drawable data yet
+        }
     }
 
-    inner class MyAdaptor : RecyclerView.Adapter<MyViewHolder>() {
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-            return MyViewHolder(LayoutInflater.from(this@KillerListActivity).inflate(R.layout.list_entity, parent, false))
+    inner class MyAdaptor(private val characters: List<Character>)
+        : RecyclerView.Adapter<CharacterViewHolder>() {
+
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterViewHolder {
+            return CharacterViewHolder(
+                LayoutInflater.from(this@KillerListActivity).inflate(
+                    R.layout.list_entity,
+                    parent,
+                    false
+                )
+            )
         }
 
-        override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-            // Start from here
+        override fun onBindViewHolder(holder: CharacterViewHolder, position: Int) {
+            holder.bind(characters[position])
         }
 
-        override fun getItemCount(): Int {
-            return killerList.size
-        }
+        override fun getItemCount(): Int = killerList.size
     }
 }
