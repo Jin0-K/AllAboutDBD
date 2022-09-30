@@ -14,10 +14,18 @@ class KillerMainActivity : AppCompatActivity() {
 
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
-        charactersSetOnClickListener()
+        val btnClicked = intent.getBooleanExtra("Killer", true)
+        if (btnClicked) {
+            charactersSetOnClickListener()
+        }
+        else {
+            tv_title.setText(R.string.survivor)
+            btn_addons.setText(R.string.items_addons)
+        }
+
     }
 
-    fun charactersSetOnClickListener() {
+    private fun charactersSetOnClickListener() {
         btn_characters.setOnClickListener {
             val intent = Intent(this@KillerMainActivity, KillerListActivity::class.java)
             startActivity(intent)

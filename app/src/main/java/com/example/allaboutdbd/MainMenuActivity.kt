@@ -3,8 +3,6 @@ package com.example.allaboutdbd
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import com.example.allaboutdbd.databinding.ActivityMainBinding
 import com.example.allaboutdbd.databinding.ActivityMainMenuBinding
 import kotlinx.android.synthetic.main.activity_main_menu.*
 
@@ -17,12 +15,18 @@ class MainMenuActivity : AppCompatActivity() {
         binding = ActivityMainMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        killerSetOnClickListener(binding.btnKiller)
+        killerSurvivorSetOnClickListener()
     }
 
-    private fun killerSetOnClickListener(btn:Button) {
-        btn.setOnClickListener {
+    private fun killerSurvivorSetOnClickListener() {
+        btn_killer.setOnClickListener {
             val intent = Intent(this@MainMenuActivity, KillerMainActivity::class.java)
+            intent.putExtra("Killer", true)
+            startActivity(intent)
+        }
+        btn_survivor.setOnClickListener {
+            val intent = Intent(this@MainMenuActivity, KillerMainActivity::class.java)
+            intent.putExtra("Killer", false)
             startActivity(intent)
         }
     }

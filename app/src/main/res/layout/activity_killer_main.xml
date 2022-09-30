@@ -62,14 +62,14 @@
             app:strokeWidth="4dp" />
 
         <Button
-            android:id="@+id/btn_items"
+            android:id="@+id/btn_addons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/grey"
             android:paddingVertical="15dp"
-            android:text="@string/items"
+            android:text="@string/addons"
             android:textColor="@color/dark_blood"
             android:textSize="22sp"
             android:textAllCaps="false"
